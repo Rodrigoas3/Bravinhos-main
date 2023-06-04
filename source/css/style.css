@@ -1,0 +1,147 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap');
+
+/* Componentes */
+@import './header.css';
+@import './main.css';
+
+/* Reset Css */
+*{
+    margin: 5px;
+    padding: 0px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+
+.container{
+    width: 1024px;
+    height: 30px auto;
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: auto;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+html, body{
+    height: 100%;
+    background-color: #f4ccd5;
+}
+
+/*.container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+#checkbox-menu{
+    position: absolute;
+    opacity: 0;
+}
+
+label{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+}
+
+label span{
+    position: absolute;
+    display: block;
+    height: 3px;
+    width: 100%;
+    border-radius: 30px;
+    background: #f4ccd5;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1){
+    top: 4;
+}
+
+label span:nth-child(2){
+    top: 8px;
+}
+
+label span:nth-child(3){
+    top: 16px;
+}
+
+#checkbox-menu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+#checkbox-menu:checked + label span:nth-child(2){
+    opacity: 0;
+}
+
+#checkbox-menu:checked + label span:nth-child(3){
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+.logo {
+    float: right;
+    /*margin-right: auto;*/
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: last baseline;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 3px 5px;
+    background-color: #2e0710;
+}
+ 
+#txtBusca{
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-size: 18px;
+    border: none;
+    height: 32px;
+    width: 191px;
+}
+#btnBusca{
+    border: none;
+    float: left;
+    height: 32px;
+    border-radius:0 7px 7px 0;
+    width: 70px;
+    font-weight: bold;
+    background: transparent;
+}
+#divBusca img{
+    /* float: left; */
+    height: 30px;
+    float: right;
+    background: none;
+    width: 30px;
+}
+
+footer ul:nth-child(1){
+    border-width: 10px;
+    border-radius: 10px;
+}
+
+/*img{
+    width: 90px;
+}*/
+.ladoalado{
+    display: flex;
+    align-items: center;
+}
